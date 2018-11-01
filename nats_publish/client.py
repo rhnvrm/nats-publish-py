@@ -31,7 +31,6 @@ class NatsPublish(object):
     def send_command(self,d):
         self.sock.sendall(bytes(d, 'utf-8'))
 
-    def publish(self,msg="hello world"):
-        subject = "foo"
-        opt_reply = ""
+    def publish(self, msg="hello world", subject="", opt_reply=""):
+        msg = str(msg)
         self.send_command("PUB {} {} {}{}{}{}".format(subject, opt_reply, len(msg), CR_LF, msg, CR_LF))

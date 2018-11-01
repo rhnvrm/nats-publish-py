@@ -1,6 +1,6 @@
 # nats-publish
 
-Minimal go-nats protocol publish-only client written in python.
+Minimal go-nats protocol based publish-only client written in python.
 
 ## Example
 
@@ -11,5 +11,6 @@ np = NatsPublish(conn_options={
             "hostname": "demo.nats.io",
             "port": 4222,
         })
-np.publish('hello world')
+
+np.publish(msg='hello world', subject="foo")
 ```
