@@ -5,7 +5,7 @@ def readme():
         return f.read()
 
 setup(name='nats_publish',
-      version='0.1.1',
+      version='0.1.2',
       description='Minimal go-nats publisher package',
       url='http://github.com/rhnvrm/nats-publish-py',
       author='Rohan Verma',

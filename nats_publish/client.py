@@ -17,9 +17,6 @@ class NatsPublish(object):
         # setup socket
         self.sock = self.setup_socket()
 
-    def __del__(self):
-        self.sock.shutdown(1)
-
     def setup_socket(self):
         sock = socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM)
         sock.settimeout(3)
